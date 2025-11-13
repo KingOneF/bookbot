@@ -1,1 +1,5 @@
 /books
+/.github
+/.vscode
+__pycache__
+.env
