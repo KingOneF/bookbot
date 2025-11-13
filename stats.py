@@ -11,3 +11,12 @@ def get_chars_dict(text):
         else:
             chars[lowered] = 1
     return chars
+
+def sort_on(item: dict) -> int:
+    return item["num"]
+
+def dict_to_sorted_list(char_counts: dict[str, int]) -> list[dict]:
+    items = [{"char": ch, "num": cnt} for ch, cnt in char_counts.items() if ch.isalpha()]
+    items.sort(key=sort_on, reverse=True)
+    return items
+
